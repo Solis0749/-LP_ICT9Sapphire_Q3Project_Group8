@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; 
+rel="stylesheet">
+</head>
+
+<style>
+
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #logo_top {
+        width: 50px;
+  }
+
+  form {
+    padding-inline: 60px;
+    padding-block: 30px;
+  }
+
+  #form {
+    border: 2px black solid;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  #pfp {
+    border: 2px black solid;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+ <div class="container-fluid">
+    <img style="width: 50px;" class="rounded-circle" src="C:\Users\Luis Andrei\Documents\grab.png" alt="logo">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="mynavbar">
+    <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Fare Matrix</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Schedule</a>
+    </li>
+    </ul>
+    <a href="registration.html" class="btn btn-primary"> Create Account </a>
+  </div>
+
+ </div>
+ </nav>
+
+    <div class="container mt-5">
+
+      <form class="form">
+
+      <div class="row justify-content-center" id="form_container" > 
+
+
+        <div id="pfp" class="col-lg-5">
+          <div class="col-6 justify-content-center" style="border: 1px solid black;">
+            <img src="PFP.png">
+            <input type="file" placeholder="Upload Profile Picture">
+          </div>
+        </div>
+
+      
+
+        <div id="form" class="col-lg-5" >
+          
+            <h1>Registration</h1>
+            <div class="row">
+            <div class="mt-3 mb-3">
+              <label for="fname">First Name</label>
+              <input class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="lname">Last Name</label>
+              <input class="form-control">
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2">
+                <label>Age</label>
+                <input class="form-control">
+              </div>
+              <div class="col-lg-10">
+                <label>Contact Number</label>
+                <input class="form-control" type="number">
+              </div>
+              <div class="row">
+            <div class="mt-4">
+              <label for="email">Email</label>
+              <input class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="user">Enter your Username</label>
+              <input class="form-control">
+            </div>
+            <div class="mt-3">
+              <label for="pswd">Enter your Password</label>
+              <input class="form-control"  type="password">
+            </div>
+            <div class="mt-3">
+              <input type="checkbox" class="form-check-input" id="check1" name="remember_me" value="checked">
+              <label class="form-check-label" for="check1" >Remember me</label>
+            </div>
+            <br> 
+            </div>
+            </div>
+            <br><br>
+            <div class="d-flex justify-content-center">
+            <a class="btn btn-lg btn-primary" href="confirmation.html" onclick="create()">Create Account</a>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    </form>
+
+    <script>
+      function create() {
+
+        window.alert("Please confirm your account.")
+      }
+    </script>
+
+
+    <script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
