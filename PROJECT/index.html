@@ -77,13 +77,26 @@ rel="stylesheet">
         padding-bottom: 30px;
     }
 
+    #schedule {
+        margin-top: 100px;
+    }
+
+    footer {
+        color: aliceblue;
+        text-align: center;
+        margin-top: 50px;
+        background-color: gray;
+        padding: 10px;
+    }
+
+
     
 
    
 
 </style>
 
-<body onload="calculate()">
+<body>
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
  <div class="container-fluid">
@@ -113,7 +126,7 @@ rel="stylesheet">
 <br>
 
  <div id="header">
-    <img style="width: 230px;" class="rounded-circle" src="C:\Users\Luis Andrei\Documents\grab.png" alt="logo"><br><br><br>
+    <img style="width: 230px;" class="rounded-circle" src="https://toppng.com/uploads/preview/grab-logo-11550724942n0ghhh9o1u.png" alt="logo"><br><br><br>
 
     <h1> Welcome to <span style="color: green;">Grab</span> Fare Guide! </h1>
 
@@ -130,6 +143,7 @@ rel="stylesheet">
 
 
  <div id="fare_matrix">
+
     <div class="container">
         <h2 id="gfm">Grab Fare Matrix</h2>
         <div class="row">
@@ -144,50 +158,51 @@ rel="stylesheet">
                 <form>
                     <label for="pickup" class="form-label">Pick Up Location: </label><br>
                     <select class="form-control" id="pickup">
-                        <option>North Avenue</option>
-                        <option>Quezon Avenue</option>
-                        <option>Kamuning</option>
-                        <option>Araneta Center-Cubao</option>
-                        <option>Santolan-Annapolis</option>
-                        <option>Ortigas</option>
-                        <option>Shaw Boulevard</option>
-                        <option>Boni</option>
-                        <option>Guadalupe</option>
-                        <option>Buendia</option>
-                        <option>Ayala</option>
-                        <option>Magallanes</option>
-                        <option>Taft Avenue</option>
+                        <option value="1">North Avenue</option>
+                        <option value="2">Quezon Avenue</option>
+                        <option value="3">Kamuning</option>
+                        <option value="4">Araneta Center-Cubao</option>
+                        <option value="5">Santolan-Annapolis</option>
+                        <option value="6">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="8">Boni</option>
+                        <option value="9">Guadalupe</option>
+                        <option value="10">Buendia</option>
+                        <option value="11">Ayala</option>
+                        <option value="12">Magallanes</option>
+                        <option value="13">Taft Avenue</option>
                     </select>
 
                     <br>
 
                     <label for="dropoff" class="form-label"> Drop-off Location: </label><br>
                     <select class="form-control" id="dropoff">
-                        <option>North Avenue</option>
-                        <option>Quezon Avenue</option>
-                        <option>Kamuning</option>
-                        <option>Araneta Center-Cubao</option>
-                        <option>Santolan-Annapolis</option>
-                        <option>Ortigas</option>
-                        <option>Shaw Boulevard</option>
-                        <option>Boni</option>
-                        <option>Guadalupe</option>
-                        <option>Buendia</option>
-                        <option>Ayala</option>
-                        <option>Magallanes</option>
-                        <option>Taft Avenue</option>
+                        <option value="1">North Avenue</option>
+                        <option value="2">Quezon Avenue</option>
+                        <option value="3">Kamuning</option>
+                        <option value="4">Araneta Center-Cubao</option>
+                        <option value="5">Santolan-Annapolis</option>
+                        <option value="6">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="8">Boni</option>
+                        <option value="9">Guadalupe</option>
+                        <option value="10">Buendia</option>
+                        <option value="11">Ayala</option>
+                        <option value="12">Magallanes</option>
+                        <option value="13">Taft Avenue</option>
                     </select>
                 </form>
 
                 <br><br>
 
-                <button type="button" class="btn btn-primary" onclick="calculate2()">Calculate</button>
-                <button type="button" class="btn btn-warning" onclick="calculate2()">Add Discount</button>
+                <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+                <button class="btn btn-success"> <input type="checkbox" id="disc"> Add Discount</button>
+                
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-0 offset-sm-3" id="display_result">
-                <div id="inner_display" class="bg-success">
-                <h2>Your Fare:  </h2>
+                <div id="inner_display" class="bg-success mb-2">
+                <h1>Your Fare:  </h1>
 
                 <br>
 
@@ -202,21 +217,95 @@ rel="stylesheet">
  </div>
 
 
+
+
+ <div id="schedule" class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 justify-content-center mb-3" style="border: 1px solid black; border-radius: 20px;">
+
+            <br>
+
+           <h1 class="text-center"><b>MRT-3 Train Schedule (26/02/2026)</b></h1>
+
+            <br>
+
+            <table class="table ">
+<thead>
+<tr class="table table-dark">
+<th scope="col">Train</th>
+<th scope="col">Route</th>
+<th scope="col">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">First Train</th>
+<td>North Ave. to Taft</td>
+<td>4:36 AM</td>
+</tr>
+<tr>
+<th scope="row">First Train</th>
+<td>Taft Ave. to North</td>
+<td>5:18 AM</td>
+
+</tr>
+<tr>
+<th scope="row">Last Train</th>
+<td>North Ave. to Taft</td>
+<td>9:30 PM</td>
+
+</tr>
+
+</tr>
+<tr>
+<th scope="row">Last Train</th>
+<td>Taft Ave. to North</td>
+<td>10:11 PM</td>
+
+</tr>
+</tbody>
+</table>
+            
+        </div>
+    </div>
+ </div>
+
+ 
+
+ <footer>
+        <p>
+            &copy; Group 8 | 9 - Sapphire @2026
+        </p>
+    </footer>
+
+ 
+
+
  <script>
     function calculate(){
-        let a = 0;
-        let b = 0;
-        let c = a + b;
+        let basefare = 50
+        let perKMrate = 15
+        let baseKM = 2
 
-        document.getElementById("fare").innerHTML= "₱" + ( c - Number(c * 0.2));
-    }
+        let pickupPoint = document.getElementById("pickup").value
+        let dropoffPoint = document.getElementById("dropoff").value
 
-    function calculate2(){
-        let a = 250;
-        let b = 50;
-        let c = a + b;
+        let distanceKM = Math.abs(pickupPoint - dropoffPoint)
+        let distanceCALC = Math.max (0, distanceKM - baseKM)
 
-        document.getElementById("fare").innerHTML= "₱" + ( c - Number(c * 0.2));
+        let fareREG = basefare + ( (distanceCALC) * perKMrate )
+        let fareDIS = fareREG - (fareREG * 0.2)
+
+        if (document.getElementById("disc").checked) {
+
+            document.getElementById("fare").innerHTML = "₱ " + fareDIS;
+        }
+
+        else {
+            document.getElementById("fare").innerHTML = "₱ " + fareREG;
+
+        }
+            
     }
  </script>
  
@@ -224,4 +313,9 @@ rel="stylesheet">
     <script 
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
+    <script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
